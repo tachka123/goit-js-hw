@@ -2,7 +2,7 @@
 
 const total = 100;
 const ordered = 50;
-let a = Number(prompt('Сколько вам надо?'));
+let a = Number(prompt('Сколько единиц товара вам надо?'));
 const b = a + ordered;
 const NOT_SUCCES = 'На складе недостаточно товаров!';
 const SUCCES = 'Заказ успешно оформлен! С вами свяжется менеджер!';
