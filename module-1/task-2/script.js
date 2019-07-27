@@ -2,14 +2,12 @@
 
 const total = 100;
 const ordered = 50;
-let a = Number(prompt('Сколько единиц товара вам надо?'));
-const b = a + ordered;
+let userCountOrder = Number(prompt('Сколько единиц товара вам надо?'));
+const newTotal = userCountOrder + ordered;
 const NOT_SUCCES = 'На складе недостаточно товаров!';
 const SUCCES = 'Заказ успешно оформлен! С вами свяжется менеджер!';
-if (a < 1) {
-  alert('Ведите число от 1');
-} else if (b <= total) {
+if (newTotal <= total) {
   alert(SUCCES);
-} else if (b > total) {
+} else if (newTotal > total) {
   alert(NOT_SUCCES);
 } else alert('ERROR');

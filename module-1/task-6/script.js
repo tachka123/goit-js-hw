@@ -1,15 +1,16 @@
+'use strict';
+
 let input;
 let total = 0;
-let i;
-for (i = 0; i != null; i++) {
+while (input !== null) {
   input = prompt(`ваше число ${total}, сколько прибавим еще?`);
-
+  const inputToNum = Number(input);
+  console.log(input);
   if (input === null) {
     alert(`Общая сумма чисел ${total}`);
-    break;
-  } else if (isNaN(input) === true || input == "") {
+  } else if (Number.isNaN(inputToNum) == true || inputToNum == '') {
     alert('Вы можете вводить только цифры! Попробуйте еще раз');
-  } else if (input != null && isNaN(input) === false) {
-    total += Number.parseInt(input);
+  } else if (inputToNum !== null) {
+    total += inputToNum;
   }
 }

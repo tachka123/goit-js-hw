@@ -1,8 +1,11 @@
 "use strict";
 
 let message = prompt("В какую страну доставить?: ");
-const normalString = message.toLowerCase();
-switch (normalString) {
+if (message === null){
+	alert("Отменено пользователем!")
+}
+else
+switch (message.toLowerCase()) {
 	case "китай":
 		alert("Китай - 100 кредитов");
 		break;
