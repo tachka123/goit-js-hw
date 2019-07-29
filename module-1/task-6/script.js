@@ -1,12 +1,11 @@
 'use strict';
-
+let input = 0;
 let total = 0;
-while (true) {
-  const input = Number.parseInt(prompt(`ваше число ${total}`));
-  if (!input && input !== 0) {
+while (input !== null) {
+  input = prompt(`ваше число ${total}`);
+  if (input === null) {
     alert(`Общая сумма чисел ${total}`);
-    break;
   } else {
-    total += input;
+    total += Number(input);
   }
 }
