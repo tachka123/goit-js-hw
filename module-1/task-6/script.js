@@ -8,5 +8,5 @@ while (true) {
     break;
   } else {
     total += input;
-  }
+  } 
 }
