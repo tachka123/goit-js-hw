@@ -6,7 +6,7 @@ while (input !== null) {
   if (input === null) {
     alert(`Общая сумма чисел ${total}`);
   } else if(Number.isNaN(Number(input))){
-    alert('Можно только вводить цифры')
+    alert('Можно вводить только цифры')
   }
    else {
     total += Number(input);
