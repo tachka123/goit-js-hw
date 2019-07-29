@@ -5,7 +5,10 @@ while (input !== null) {
   input = prompt(`ваше число ${total}`);
   if (input === null) {
     alert(`Общая сумма чисел ${total}`);
-  } else {
+  } else if(Number.isNaN(Number(input))){
+    alert('Можно только вводить цифры')
+  }
+   else {
     total += Number(input);
   }
 }
