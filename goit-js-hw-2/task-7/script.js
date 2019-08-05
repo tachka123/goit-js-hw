@@ -17,7 +17,6 @@ while (input !== null) {
 
 for (let i = 0; i < numbers.length; i++) {
   total = total + numbers[i];
-  console.log(numbers[i])
 }
 
 console.log(`Общая сумма чисел - ${total}`);
