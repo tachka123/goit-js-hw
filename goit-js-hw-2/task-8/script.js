@@ -16,7 +16,9 @@ function addLogin(allLogins, login) {
    alert('Такой логин уже используется!');
  }
  else {
+   logins.push(login);
    alert('Логин успешно добавлен!')
+
  }
 }
 
