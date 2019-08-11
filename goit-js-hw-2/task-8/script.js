@@ -18,7 +18,6 @@ function addLogin(allLogins, login) {
  else {
    logins.push(login);
    alert('Логин успешно добавлен!')
-
  }
 }
 
