@@ -1,7 +1,8 @@
 'use strict';
 
 function findBestEmployee(employees) {
-  let bestEmloyer;
+  const employersNames = Object.keys(employees);
+  let bestEmloyer = employersNames[0] ;
   let bestEmloyerProd = 0;
   for (const key of Object.keys(employees)) {
     if (bestEmloyerProd < employees[key]) {
