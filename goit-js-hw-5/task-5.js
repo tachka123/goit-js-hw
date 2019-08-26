@@ -1,10 +1,6 @@
 'use strict';
 
 class Car {
-  static getSpecs(car) {
-    return console.log(car);
-  }
-
   constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
     this.speed = speed;
     this._price = price;
@@ -12,7 +8,9 @@ class Car {
     this.isOn = isOn;
     this.distance = distance;
   }
-
+  static getSpecs(car) {
+    return console.log(car);
+  }
   get price() {
     return this._price;
   }
