@@ -20,12 +20,11 @@ const images = [
 
 function addImgToUl(images) {
   const gallery = document.getElementById('gallery');
+  let imgCode = ``;
   images.forEach(element => {
-    gallery.insertAdjacentHTML(
-      'beforeend',
-      `<li><img src="${element.url}" alt="${element.alt}"></li>`,
-    );
+    imgCode += `<li><img src="${element.url}" alt="${element.alt}"></li>`;
   });
+  gallery.insertAdjacentHTML('beforeend', imgCode);
 }
 
 addImgToUl(images);

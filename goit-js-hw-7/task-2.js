@@ -11,10 +11,12 @@ const ingredients = [
 
 function addToUl(array) {
   const ingredientsDOM = document.getElementById('ingredients');
+  const mass = [];
   array.forEach(element => {
     const li = document.createElement('li');
     li.textContent = element;
-    ingredientsDOM.append(li);
+    mass.push(li)
   });
+  ingredientsDOM.append(...mass)
 }
 addToUl(ingredients);
