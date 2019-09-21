@@ -52,13 +52,13 @@ lightBoxButton.addEventListener('click', () => {
   exitLightbox();
 });
 
-addEventListener('keyup', () => {
+lightboxContent.addEventListener('keyup', () => {
   if (event.keyCode === 27) {
     exitLightbox();
   }
 });
 
-const exitLightbox = function() {
+function exitLightbox() {
   lightBox.classList.remove('is-open');
   lightBoxImg.src = '';
 };
