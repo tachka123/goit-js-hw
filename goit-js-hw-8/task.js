@@ -1,4 +1,4 @@
-import { gallery } from './galleryItems.js';
+import { default as gallery } from './galleryItems.js';
 
 const galleryRef = document.querySelector('.gallery');
 const lightBoxImg = document.querySelector('.lightbox___image');

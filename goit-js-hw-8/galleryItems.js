@@ -1,4 +1,4 @@
-const gallery = [
+export default[
 	{
 	  preview:
 		'https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825__340.jpg',
@@ -64,4 +64,3 @@ const gallery = [
 	},
   ];
 
-  export {gallery}
