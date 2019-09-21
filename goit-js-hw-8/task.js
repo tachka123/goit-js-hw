@@ -1,3 +1,5 @@
+'use strict'
+
 import gallery from './galleryItems.js';
 
 const galleryRef = document.querySelector('.gallery');
@@ -54,7 +56,7 @@ lightBoxButton.addEventListener('click', () => {
 });
 
 addEventListener('keyup', () => {
-  if (event.keyCode === 27 && lightBox.classList.contains('is-open' )) {
+  if (event.keyCode === 27 && lightBox.classList.contains('is-open')) {
     exitLightbox();
   }
 });
