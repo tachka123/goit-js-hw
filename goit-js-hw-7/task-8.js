@@ -11,7 +11,7 @@ destroyBtn.addEventListener('click', destroyBoxes);
 function createBoxes(amount) {
   amount = input.value;
   for (let i = 0; i < amount; i++) {
-	const heightAndWidthFormula = `${30 + i * 10}px`;
+	const heightAndWidthFormula = `${Math.random() * 1000}px`;
     const square = document.createElement('div');
     square.style.height = heightAndWidthFormula ;
     square.style.width = heightAndWidthFormula;
@@ -29,3 +29,9 @@ function destroyBoxes() {
 function getRandomColor() {
 	return Math.random() * 255;
   }
+
+  //for(const item of [...document.querySelector('#boxes').children]){item.style.width = '0'; item.style.height = '0' }
+
+
+
+
