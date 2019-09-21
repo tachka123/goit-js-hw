@@ -38,7 +38,8 @@ galleryRef.addEventListener('click', e => {
   e.preventDefault();
   if (e.target !== e.currentTarget) {
     lightBoxImg.src = e.target.getAttribute('data-source');
-    lightBox.classList.add('is-open');
+	lightBox.classList.add('is-open');
+
   }
 });
 
@@ -52,8 +53,8 @@ lightBoxButton.addEventListener('click', () => {
   exitLightbox();
 });
 
-lightboxContent.addEventListener('keyup', () => {
-  if (event.keyCode === 27) {
+addEventListener('keyup', () => {
+  if (event.keyCode === 27 && lightBox.classList.contains('is-open' )) {
     exitLightbox();
   }
 });
