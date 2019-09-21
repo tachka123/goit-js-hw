@@ -3,6 +3,7 @@ import gallery from './galleryItems.js';
 const galleryRef = document.querySelector('.gallery');
 const lightBoxImg = document.querySelector('.lightbox___image');
 const lightboxContent = document.querySelector('.lightbox__content');
+const lightBox = document.querySelector('.lightbox');
 
 const createGallery = function(gallery) {
   let stringImg = '';
@@ -34,7 +35,7 @@ galleryRef.addEventListener('click', e => {
   e.preventDefault();
   if (e.target !== e.currentTarget) {
     lightBoxImg.src = e.target.getAttribute('data-source');
-    document.querySelector('.lightbox').classList.add('is-open');
+    lightBox.classList.add('is-open');
   }
 });
 
@@ -55,7 +56,7 @@ addEventListener('keyup', () => {
 });
 
 const exitLightbox = function() {
-  document.querySelector('.lightbox').classList.remove('is-open');
+  lightBox.classList.remove('is-open');
   lightBoxImg.src = '';
 };
 
