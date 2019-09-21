@@ -8,8 +8,7 @@ const lightBox = document.querySelector('.lightbox');
 const createGallery = function(gallery) {
   let stringImg = '';
   gallery.forEach(li => {
-    stringImg =
-      stringImg +
+    stringImg +=
       `<li class="gallery__item">
 	<a
 	  class="gallery__link"
