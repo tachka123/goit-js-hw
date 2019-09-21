@@ -4,12 +4,12 @@ const galleryRef = document.querySelector('.gallery');
 const lightBoxImg = document.querySelector('.lightbox___image');
 const lightboxContent = document.querySelector('.lightbox__content');
 const lightBox = document.querySelector('.lightbox');
+const lightBoxButton = document.querySelector('.lightbox__button');
 
-const createGallery = function(gallery) {
+function createGallery() {
   let stringImg = '';
   gallery.forEach(li => {
-    stringImg +=
-      `<li class="gallery__item">
+    stringImg += `<li class="gallery__item">
 	<a
 	  class="gallery__link"
 	  href="${li.original}"
@@ -27,8 +27,12 @@ const createGallery = function(gallery) {
 	</a>
   </li>`;
   });
-  galleryRef.insertAdjacentHTML('beforeend', stringImg);
-};
+  return stringImg;
+}
+
+function insertGalary() {
+  galleryRef.insertAdjacentHTML('beforeend', createGallery());
+}
 
 galleryRef.addEventListener('click', e => {
   e.preventDefault();
@@ -44,7 +48,7 @@ lightboxContent.addEventListener('click', e => {
   }
 });
 
-document.querySelector('.lightbox__button').addEventListener('click', e => {
+lightBoxButton.addEventListener('click', () => {
   exitLightbox();
 });
 
@@ -59,4 +63,4 @@ const exitLightbox = function() {
   lightBoxImg.src = '';
 };
 
-createGallery(gallery);
+insertGalary();
