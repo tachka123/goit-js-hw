@@ -4,9 +4,7 @@ import gallery from './galleryItems.js';
 
 const galleryRef = document.querySelector('.gallery');
 const lightBoxImg = document.querySelector('.lightbox___image');
-const lightboxContent = document.querySelector('.lightbox__content');
 const lightBox = document.querySelector('.lightbox');
-const lightBoxButton = document.querySelector('.lightbox__button');
 
 function createGallery() {
   let stringImg = '';
@@ -45,15 +43,11 @@ galleryRef.addEventListener('click', e => {
   }
 });
 
-lightboxContent.addEventListener('click', e => {
+lightBox.addEventListener('click', (e) =>{
   if (e.target !== lightBoxImg) {
     exitLightbox();
   }
-});
-
-lightBoxButton.addEventListener('click', () => {
-  exitLightbox();
-});
+})
 
 addEventListener('keyup', () => {
   if (event.keyCode === 27 && lightBox.classList.contains('is-open')) {
