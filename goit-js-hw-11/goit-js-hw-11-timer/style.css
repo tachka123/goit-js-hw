@@ -1,0 +1,9 @@
+body{
+	display: flex;
+	justify-content: flex-start;
+}
+.timer{
+	margin: 10px 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}

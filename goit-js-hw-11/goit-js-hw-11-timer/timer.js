@@ -69,3 +69,6 @@ class CountdownTimer {
 
 const timer = new CountdownTimer('timer-1', new Date('Oct 1, 2019'));
 timer.createTimer();
+
+const timer2 = new CountdownTimer('timer-2', new Date('nov 13, 2000'));
+timer2.createTimer();
