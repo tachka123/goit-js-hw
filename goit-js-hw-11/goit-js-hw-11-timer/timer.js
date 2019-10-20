@@ -49,12 +49,20 @@ class CountdownTimer {
   }
   startTimer() {
     const thisTimer = document.getElementById(this.selector);
+    const days = thisTimer.querySelector('[data-value="days"]');
+    const hours = thisTimer.querySelector('[data-value="hours"]')
+    const mins = thisTimer.querySelector('[data-value="mins"]')
+    const secs = thisTimer.querySelector('[data-value="secs"]')
+
     const interval = setInterval(() => {
 		if(this.time === 0){
 			clearInterval(interval);
 		}
       this.time -= 1000;
-      thisTimer.innerHTML = this.htmlTimer();
+      days.textContent = this.getDays();
+      hours.textContent = this.getHours();
+      mins.textContent = this.getMins();
+      secs.textContent = this.getSecs();
     }, 1000);
   }
 }
