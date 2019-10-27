@@ -1,4 +1,3 @@
-
 export default function(weather) {
   console.log(weather);
   const location = document.querySelector('[data-field="location"]');
@@ -12,5 +11,5 @@ export default function(weather) {
   );
   Wind.textContent = Math.round(weather.currently.windSpeed * 1.609344);
   Conditions.textContent = weather.currently.summary;
-  location.textContent = weather.timezone
+  location.textContent = weather.timezone;
 }
