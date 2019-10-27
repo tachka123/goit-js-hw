@@ -1,4 +1,4 @@
-class CountdownTimer {
+export class CountdownTimer {
   constructor(selector, targetDate) {
     this.selector = selector;
     this.targetDate = targetDate;
