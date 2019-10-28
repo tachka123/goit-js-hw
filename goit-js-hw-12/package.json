@@ -51,6 +51,7 @@
     "handlebars": "^4.4.5",
     "ngx-spinner": "^8.0.3",
     "pnotify": "^4.0.0",
+    "regenerator-runtime": "^0.13.3",
     "vanilla-modal": "^1.6.5"
   }
 }
