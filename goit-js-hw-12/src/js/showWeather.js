@@ -4,7 +4,10 @@ export default async function(weather, city) {
       `https://us1.locationiq.com/v1/reverse.php?key=9c8bd24f982849&lat=${weather.latitude}&lon=${weather.longitude}&format=json`,
     )
       .then(result => result.json())
-      .then(result => (city = result.display_name.split(',')[3]));
+      .then(result => {
+        city = result.display_name.split(',')
+        city = `${city[1]},${city[2]},${city[3]},${city[4]}`
+      });
   }
   const location = document.querySelector('[data-field="location"]');
   const temperature = document.querySelector('[data-field="temp"]');
