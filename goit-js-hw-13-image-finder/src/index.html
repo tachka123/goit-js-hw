@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webpack Starter Kit</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo_container">
+          <img src="./images/myLogo.png" alt="" class="logo" />
+        </div>
+        <form class="search-form" id="search-form">
+          <h1>Find your picture by name!</h1>
+          <input
+            type="search"
+            name="query"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <ul class="gallery"></ul>
+    </div>
+    <div class="load_more"><button class="load_more-btn">Load More</button></div>
+    <div class="loading">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
